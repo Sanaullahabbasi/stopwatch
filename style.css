@@ -67,6 +67,18 @@ body {
   border-radius: 5px;
   padding: 5px 10px;
 }
+.getValues{
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: rgb(3, 80, 25);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400px;
+  border: 1px solid rgb(29, 74, 3);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 15px;
+}
 
 .btn .active {
   cursor: not-allowed;
@@ -126,4 +138,15 @@ body {
     position: absolute;
     left: -40px;
     top: 0px;
+}
+
+.value-data{
+  width: 400px;
+  height: 200px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
 }

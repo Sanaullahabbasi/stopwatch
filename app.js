@@ -12,8 +12,10 @@ var interval;
 var startBtn = document.querySelector(".startbtn");
 var stopBtn = document.querySelector(".stopbtn");
 var resetBtn = document.querySelector(".resetbtn");
+var getData = document.querySelector(".value-data");
 
 function start() {
+  getData.style.display = "none";
   startBtn.classList.add("active");
   stopBtn.classList.remove("activeRemove");
   interval = setInterval(function () {
@@ -42,8 +44,9 @@ function stop() {
 }
 
 function reset() {
+  getData.style.display = "none";
   startBtn.classList.remove("active");
-    clearInterval(interval);
+  clearInterval(interval);
   hour = 0;
   min = 0;
   sec = 0;
@@ -54,6 +57,16 @@ function reset() {
   getMilisec.innerHTML = milisec + "0";
 }
 
-function fullScreen (){
-    document.documentElement.requestFullscreen()
+function fullScreen() {
+  document.documentElement.requestFullscreen();
+}
+
+function getValue() {
+  getData.style.display = "block";
+  getData.style.display = "flex"
+  getData.innerHTML = `
+  <div id="hr">${hour} <span>h</span></div>
+  <div id="min">${min} <span>m</span></div>
+  <div id="sec">${sec} <span>s</span></div>
+  <div id="mil">${milisec} </div>`;
 }
