@@ -21,15 +21,15 @@ function start() {
     getMilisec.innerHTML = milisec;
     if (milisec >= 100) {
       sec++;
-      getSeconds.innerHTML = sec;
+      getSeconds.innerHTML = sec + `<span>s</span>`;
       milisec = 0;
-    } else if (sec >= 5) {
+    } else if (sec >= 60) {
       min++;
-      getMinutes.innerHTML = min;
+      getMinutes.innerHTML = min + `<span>m</span>`;
       sec = 0;
-    } else if (min >= 2) {
+    } else if (min >= 60) {
       hour++;
-      getHours.innerHTML = hour;
+      getHours.innerHTML = hour + `<span>h</span>`;
       min = 0;
     }
   }, 10);
@@ -42,13 +42,17 @@ function stop() {
 }
 
 function reset() {
-//   startBtn.classList.remove("active");
+    clearInterval(interval);
   hour = 0;
   min = 0;
   sec = 0;
   milisec = 0;
-  getHours.innerHTML = hour + "0";
-  getMinutes.innerHTML = min + "0";
-  getSeconds.innerHTML = sec + "0";
+  getHours.innerHTML = "";
+  getMinutes.innerHTML = "";
+  getSeconds.innerHTML = "";
   getMilisec.innerHTML = milisec + "0";
+}
+
+function fullScreen (){
+    document.documentElement.requestFullscreen()
 }
