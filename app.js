@@ -42,6 +42,7 @@ function stop() {
 }
 
 function reset() {
+  startBtn.classList.remove("active");
     clearInterval(interval);
   hour = 0;
   min = 0;
