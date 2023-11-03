@@ -64,7 +64,7 @@ function fullScreen() {
 function getValue() {
   getData.style.display = "block";
   getData.style.display = "flex"
-  getData.innerHTML += `
+  getData.innerHTML = `
   <div id="hr">${hour} <span>h</span></div>
   <div id="min">${min} <span>m</span></div>
   <div id="sec">${sec} <span>s</span></div>
