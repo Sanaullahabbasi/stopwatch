@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="header">
+        <div class="timer">TIMER
+            <div><img src="images/timerIcon.svg" alt=""></div>
+        </div>
+        <div class="stopwatch">STOPWATCH
+            <div><img src="images/stopwatchIcon.svg" alt=""></div>
+        </div>
+    </div>
     <div class="main">
       <div id="hr"></div>
       <div id="min"></div>
       <div id="sec"></div>
       <div id="mil">00</div>
       <div id="icon">
-        <img src="images/icon.png" onclick="fullScreen()" alt="">
+        <img title="fullScreen" src="images/icon.png" onclick="fullScreen()" alt="">
     </div>
+    
     </div>
     <div class="btn">
       <button class="startbtn" onclick="start()">Start</button>
