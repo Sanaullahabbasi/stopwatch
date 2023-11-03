@@ -53,3 +53,7 @@ body{
     cursor: not-allowed;
     opacity: 0.8;
 }
+.btn .activeRemove {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
