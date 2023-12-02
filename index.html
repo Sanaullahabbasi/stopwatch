@@ -3,41 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stop Watch</title>
+    <title>Stopwatch with Timer</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="header">
-        <div class="timer">TIMER
-            <div><img src="images/timerIcon.svg" alt=""></div>
-        </div>
-        <div class="stopwatch">STOPWATCH
-            <div><img src="images/stopwatchIcon.svg" alt=""></div>
-        </div>
-    </div>
-    <div class="main">
-      <div id="hr"></div>
-      <div id="min"></div>
-      <div id="sec"></div>
-      <div id="mil">00</div>
-      <div id="icon">
-        <img title="fullScreen" src="images/icon.png" onclick="fullScreen()" alt="">
-    </div>
-    
-    </div>
-    <div class="btn">
-      <button class="startbtn" onclick="start()">Start</button>
-      <button class="stopbtn" onclick="stop()">Stop</button>
-      <button class="resetbtn" onclick="reset()">Reset</button>
-    </div>
+    <div id="main">
+      <div id="header">
+        <button id="timer" onclick="timer()">
+          Timer
+          <img src="images/timerIcon.svg" alt="" />
+        </button>
 
-    <div class="lab-btn">
-      <button class="getValues" onclick="getValue()">Get Values</button>
+        <button id="Stopwatch" onclick="stopwatch()">
+          Stopwatch
+          <img src="images/stopwatchIcon.svg" alt="" />
+        </button>
+      </div>
+      <div id="textBody">
+        <div id="hr"  style="display: none;"></div>
+        <div id="min" style="display: none;"></div>
+        <div id="sec"  class="sec_blue" style="display: none;"></div>
+        <div id="mil" style="display: none;"></div>
+
+        <div class="input_field" style="display: none;">
+          <input type="number" name="" id="timer_value" placeholder="00m 00s" />
+        </div>
+      
+      </div>
+      <div id="btn_sec">
+        <button id="start" >Start</button>
+        <button id="stop"  style="display: none;">Stop</button>
+        <button id="reset" >Reset</button>
+        <div id="icon">
+            <img
+              id="full"
+              title="fullScreen"
+              src="images/icon.png"
+              onclick="fullScreen()"
+              alt=""
+            />
+            <img
+              id="close"
+              title="closeFullScreen"
+              src="images/closedIcon.png"
+              onclick="closeFullScreen()"
+              alt="" style="display: none;"
+            />
+          </div>
+      </div>
     </div>
-    <div class="value-data" style="display: none;">
-     
-    </div>
-    
 
     <script src="app.js"></script>
   </body>
