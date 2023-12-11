@@ -28,6 +28,7 @@ stopBtn.style.display = "none";
 
 
 function stopwatch() {
+  
   stopWatchUI.style.borderBottom = "2px solid #1a73e8";
   stopWatchUI.style.color = "#1a73e8";
   timerUI.style.borderBottom= "none";
